@@ -16,10 +16,12 @@ import ReturnOnInvestment from "@/components/ReturnOnInvestment";
 import CityMarketing from "@/components/CityMarketing";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
   return (
     <div className="bg-gradient-to-br from-[#2D165E] via-[#020004] to-[#080314] text-foreground min-h-screen font-sans selection:bg-dhwani-accent selection:text-dhwani-white overflow-x-hidden w-full">
+      <LoadingScreen />
       <Navbar />
       <main>
         <Hero />
