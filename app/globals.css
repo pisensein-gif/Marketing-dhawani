@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+:root {
+  --background: #020004;
+  --foreground: #FCFCFC;
+  --dhwani-deep-purple: #080314;
+  --dhwani-purple: #100823;
+  --dhwani-violet: #20143A;
+  --dhwani-highlight: #342853;
+  --dhwani-white: #FCFCFC;
+  --dhwani-gold: #FFD700;
+  --dhwani-accent: #8B5CF6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-dhwani-deep-purple: var(--dhwani-deep-purple);
+  --color-dhwani-purple: var(--dhwani-purple);
+  --color-dhwani-violet: var(--dhwani-violet);
+  --color-dhwani-highlight: var(--dhwani-highlight);
+  --color-dhwani-white: var(--dhwani-white);
+  --color-dhwani-gold: var(--dhwani-gold);
+  --color-dhwani-accent: var(--dhwani-accent);
+  
+  /* Default all typography to Montserrat (font-custom-block) */
+  --font-sans: var(--font-custom-block, "ui-sans-serif", "system-ui");
+  --font-block: var(--font-custom-block, "ui-sans-serif", "system-ui");
+  --font-cursive: var(--font-custom-block, "ui-sans-serif", "system-ui");
+  --font-comic: var(--font-custom-block, "ui-sans-serif", "system-ui");
+  --font-body: var(--font-custom-sans, "ui-sans-serif", "system-ui");
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-custom-block, sans-serif);
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Paragraphs and body copy strictly use DM Sans (Google Sans) */
+p, .font-body {
+  font-family: var(--font-custom-sans, sans-serif);
+}
+
+/* Headings, buttons, labels, and block elements strictly use Montserrat */
+h1, h2, h3, h4, h5, h6, button, a, .font-block {
+  font-family: var(--font-custom-block, sans-serif);
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  .animate-marquee-reverse {
+    animation: marquee-reverse 35s linear infinite;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
