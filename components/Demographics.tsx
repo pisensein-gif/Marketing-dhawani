@@ -114,7 +114,7 @@ export default function Demographics() {
               {/* Total Counter */}
               <div className="flex flex-col">
                 <p className="text-white/60 font-sans text-sm uppercase tracking-widest font-bold mb-2">Total Student Base</p>
-                <div className="text-6xl sm:text-7xl md:text-8xl lg:text-[100px] font-block text-white leading-none drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+                <div className="text-6xl sm:text-7xl md:text-8xl lg:text-[100px] font-body font-bold text-white leading-none drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
                   <AnimatedCounter from={0} to={5000} suffix="+" />
                 </div>
               </div>
@@ -135,7 +135,7 @@ export default function Demographics() {
                   <div className="flex flex-col">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-dhwani-gold"></div>
-                      <span className="font-block text-xl text-white">3500+</span>
+                      <span className="font-body font-bold text-xl text-white">3500+</span>
                     </div>
                     <span className="text-[10px] text-white/50 font-bold tracking-widest uppercase ml-5">UG Students</span>
                   </div>
@@ -143,7 +143,7 @@ export default function Demographics() {
                   <div className="flex flex-col">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-[#E5162E]"></div>
-                      <span className="font-block text-xl text-white">1000+</span>
+                      <span className="font-body font-bold text-xl text-white">1000+</span>
                     </div>
                     <span className="text-[10px] text-white/50 font-bold tracking-widest uppercase ml-5">PG Students</span>
                   </div>
@@ -151,7 +151,7 @@ export default function Demographics() {
                   <div className="flex flex-col">
                     <div className="flex items-center gap-2">
                       <div className="w-3 h-3 rounded-full bg-[#B829FF]"></div>
-                      <span className="font-block text-xl text-white">500+</span>
+                      <span className="font-body font-bold text-xl text-white">500+</span>
                     </div>
                     <span className="text-[10px] text-white/50 font-bold tracking-widest uppercase ml-5">MBA & Others</span>
                   </div>
@@ -162,16 +162,16 @@ export default function Demographics() {
               <div className="flex items-center justify-between p-6 bg-black/20 rounded-3xl border border-white/5 mt-4">
                 <div className="flex flex-col">
                   <span className="text-white/60 font-sans text-xs uppercase tracking-widest font-bold mb-1">Gender Ratio</span>
-                  <span className="font-block text-3xl text-white">3:2</span>
+                  <span className="font-body font-bold text-3xl text-white">3:2</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <PersonIcon className="w-6 h-6 text-white" />
-                    <span className="font-bold text-sm text-white/80">60%</span>
+                    <span className="font-body font-bold text-sm text-white/80">60%</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <PersonIcon className="w-6 h-6 text-[#B829FF]" />
-                    <span className="font-bold text-sm text-[#B829FF]">40%</span>
+                    <span className="font-body font-bold text-sm text-[#B829FF]">40%</span>
                   </div>
                 </div>
               </div>
@@ -262,9 +262,9 @@ export default function Demographics() {
 
             {/* Center: Footfall Text */}
             <div className="relative lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 z-40 text-center w-full lg:w-auto my-8 lg:my-0 flex flex-col items-center justify-center scale-110 lg:scale-125">
-              <h3 className="text-4xl md:text-5xl lg:text-7xl font-block text-white drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] z-10 relative">FOOTFALL</h3>
-              <div className="text-[80px] sm:text-[100px] md:text-[120px] lg:text-[150px] font-block text-dhwani-gold leading-none drop-shadow-[0_0_60px_rgba(255,215,0,0.6)] z-10 relative">
-                100K+
+              <h3 className="text-4xl md:text-5xl lg:text-7xl font-block text-white drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)] z-10 relative mb-2">FOOTFALL</h3>
+              <div className="z-10 relative flex justify-center items-center">
+                <img src="/100K+.png" alt="100K+" className="h-24 md:h-32 lg:h-40 w-auto object-contain drop-shadow-[0_0_60px_rgba(255,215,0,0.6)]" />
               </div>
             </div>
 
@@ -287,38 +287,38 @@ export default function Demographics() {
                   ></div>
                   {/* Desktop Absolute Labels */}
                   <div className="hidden lg:flex absolute -right-32 -top-6 text-xs font-block tracking-widest text-dhwani-white w-32 text-left">REMAINING<br/>PARTICIPATIONS</div>
-                  <div className="absolute top-[20%] right-[30%] transform translate-x-1/2 -translate-y-1/2 text-xs md:text-sm font-block text-black">12.5%</div>
+                  <div className="absolute top-[20%] right-[30%] transform translate-x-1/2 -translate-y-1/2 text-xs md:text-sm font-body font-bold text-black">12.5%</div>
                   
                   <div className="hidden lg:flex absolute -right-36 top-[30%] text-xs font-block tracking-widest text-dhwani-white w-32 text-left">CUSAT & CENTRAL</div>
-                  <div className="absolute top-[35%] right-[15%] transform translate-x-1/2 -translate-y-1/2 text-xs md:text-sm font-block text-black drop-shadow-md">11.5%</div>
+                  <div className="absolute top-[35%] right-[15%] transform translate-x-1/2 -translate-y-1/2 text-xs md:text-sm font-body font-bold text-black drop-shadow-md">11.5%</div>
 
                   <div className="hidden lg:flex absolute -right-44 bottom-8 text-xs font-block tracking-widest text-dhwani-white w-40 text-left">KERALA UNIVERSITY<br/>(KU MAIN/ARTS)</div>
-                  <div className="absolute bottom-[25%] right-[25%] transform translate-x-1/2 translate-y-1/2 text-xs md:text-sm font-block text-white drop-shadow-md">24.0%</div>
+                  <div className="absolute bottom-[25%] right-[25%] transform translate-x-1/2 translate-y-1/2 text-xs md:text-sm font-body font-bold text-white drop-shadow-md">24.0%</div>
 
                   <div className="hidden lg:flex absolute -left-24 top-[20%] -translate-y-1/2 text-xs font-block tracking-widest text-dhwani-white flex-col text-right z-50">
                     <span>KTU</span>
                     <span>(AFFILIATED)</span>
                   </div>
-                  <div className="absolute top-[50%] left-[25%] transform -translate-x-1/2 -translate-y-1/2 text-xs md:text-sm font-block text-white drop-shadow-md z-50">52.0%</div>
+                  <div className="absolute top-[50%] left-[25%] transform -translate-x-1/2 -translate-y-1/2 text-xs md:text-sm font-body font-bold text-white drop-shadow-md z-50">52.0%</div>
                 </div>
 
                 {/* Mobile Legend */}
                 <div className="grid grid-cols-2 gap-2 mt-8 lg:hidden w-full max-w-sm px-2">
                   <div className="flex items-center gap-2 bg-white/5 p-2 rounded-lg border border-white/5">
                     <div className="w-3 h-3 rounded-full bg-[#6B21A8]"></div>
-                    <span className="text-[10px] font-block text-white">KTU (52.0%)</span>
+                    <span className="text-[10px] font-body font-bold text-white">KTU (52.0%)</span>
                   </div>
                   <div className="flex items-center gap-2 bg-white/5 p-2 rounded-lg border border-white/5">
                     <div className="w-3 h-3 rounded-full bg-[#9333EA]"></div>
-                    <span className="text-[10px] font-block text-white">KU MAIN (24.0%)</span>
+                    <span className="text-[10px] font-body font-bold text-white">KU MAIN (24.0%)</span>
                   </div>
                   <div className="flex items-center gap-2 bg-white/5 p-2 rounded-lg border border-white/5">
                     <div className="w-3 h-3 rounded-full bg-[#C084FC]"></div>
-                    <span className="text-[10px] font-block text-white">CUSAT (11.5%)</span>
+                    <span className="text-[10px] font-body font-bold text-white">CUSAT (11.5%)</span>
                   </div>
                   <div className="flex items-center gap-2 bg-white/5 p-2 rounded-lg border border-white/5">
                     <div className="w-3 h-3 rounded-full bg-[#E9D5FF]"></div>
-                    <span className="text-[10px] font-block text-white">OTHERS (12.5%)</span>
+                    <span className="text-[10px] font-body font-bold text-white">OTHERS (12.5%)</span>
                   </div>
                 </div>
               </div>

@@ -10,7 +10,7 @@ export default function WhyDhwani() {
       {/* Background Ambience */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1A0B2E]/30 via-transparent to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#E5162E]/10 via-transparent to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#8B12FF]/10 via-transparent to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
@@ -20,18 +20,18 @@ export default function WhyDhwani() {
           {/* Left Column: Sticky Title */}
           <div className="lg:w-1/3 lg:sticky lg:top-32 flex flex-col pt-10">
             <motion.h2 
-              className="flex flex-col text-[50px] sm:text-[65px] lg:text-[100px] xl:text-[120px] leading-[0.85] font-block drop-shadow-2xl relative"
+              className="flex flex-col text-[50px] sm:text-[65px] lg:text-[100px] xl:text-[120px] leading-[0.85] font-body font-bold drop-shadow-2xl relative"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <span className="text-white italic transform -translate-x-2">WHY</span>
-              <span className="text-[#E5162E] tracking-tighter">DHWANI</span>
+              <span className="text-white transform -translate-x-2">WHY</span>
+              <span className="text-dhwani-accent tracking-tighter">DHWANI</span>
               <span className="text-white/50 text-[60px] sm:text-[80px] lg:text-[120px] absolute -right-4 lg:-right-8 top-0 italic">?</span>
             </motion.h2>
             
             <motion.div 
-              className="mt-12 w-16 h-1 bg-gradient-to-r from-[#E5162E] to-transparent"
+              className="mt-12 w-16 h-1 bg-gradient-to-r from-[#8B12FF] to-transparent"
               initial={{ width: 0 }}
               whileInView={{ width: 64 }}
               viewport={{ once: true }}
@@ -53,12 +53,14 @@ export default function WhyDhwani() {
             
             {/* 1. Footfall (Large, 2x2) */}
             <motion.div 
-              className="col-span-2 md:col-span-2 row-span-2 p-8 lg:p-10 bg-gradient-to-br from-[#100823] to-[#0A0515] rounded-[32px] border border-white/10 flex flex-col justify-end min-h-[250px] group hover:border-[#E5162E]/50 transition-colors"
+              className="col-span-2 md:col-span-2 row-span-2 p-8 lg:p-10 bg-gradient-to-br from-[#100823] to-[#0A0515] rounded-[32px] border border-white/10 flex flex-col justify-end min-h-[250px] group hover:border-[#8B12FF]/50 transition-colors"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="text-[#E5162E] text-7xl lg:text-8xl font-block leading-none drop-shadow-[0_0_20px_rgba(229,22,46,0.5)] group-hover:scale-105 transition-transform origin-left">100k+</div>
+              <div className="flex items-center">
+                <img src="/100K+.png" alt="100K+" className="h-20 lg:h-28 w-auto object-contain drop-shadow-[0_0_20px_rgba(139,18,255,0.5)] group-hover:scale-105 transition-transform origin-left" />
+              </div>
               <div className="text-white text-xl lg:text-2xl font-bold uppercase tracking-widest mt-4">Foot Fall</div>
             </motion.div>
 
@@ -70,7 +72,7 @@ export default function WhyDhwani() {
               transition={{ delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <div className="text-white text-4xl lg:text-5xl font-block leading-none">25+</div>
+              <div className="text-white text-4xl lg:text-5xl font-body font-bold leading-none">25+</div>
               <div className="text-white/60 text-xs lg:text-sm uppercase tracking-wider mt-2 font-bold">Years Legacy</div>
             </motion.div>
 
@@ -82,7 +84,7 @@ export default function WhyDhwani() {
               transition={{ delay: 0.15 }}
               viewport={{ once: true }}
             >
-              <div className="text-white text-4xl lg:text-5xl font-block leading-none">1000+</div>
+              <div className="text-white text-4xl lg:text-5xl font-body font-bold leading-none">1000+</div>
               <div className="text-white/60 text-xs lg:text-sm uppercase tracking-wider mt-2 font-bold">Campus</div>
             </motion.div>
 
@@ -108,7 +110,7 @@ export default function WhyDhwani() {
               transition={{ delay: 0.25 }}
               viewport={{ once: true }}
             >
-              <div className="text-dhwani-gold text-3xl lg:text-4xl font-block leading-none">KERALA-WIDE</div>
+              <div className="text-dhwani-gold text-3xl lg:text-4xl font-body font-bold leading-none">KERALA-WIDE</div>
               <div className="text-white/60 text-xs lg:text-sm uppercase tracking-wider mt-2 font-bold">Visibility</div>
             </motion.div>
 
@@ -121,7 +123,7 @@ export default function WhyDhwani() {
               viewport={{ once: true }}
             >
               <div>
-                <div className="text-dhwani-gold text-5xl lg:text-6xl font-block leading-none">1M+</div>
+                <img src="/1M+.png" alt="1M+" className="h-14 lg:h-20 w-auto object-contain drop-shadow-[0_0_20px_rgba(255,215,0,0.5)]" />
                 <div className="text-white text-sm lg:text-lg uppercase tracking-widest mt-2 font-bold">Cash Prizes</div>
               </div>
               <div className="text-white/40 text-[10px] font-sans">Distributed across events</div>
@@ -135,7 +137,7 @@ export default function WhyDhwani() {
               transition={{ delay: 0.35 }}
               viewport={{ once: true }}
             >
-              <div className="text-white text-4xl lg:text-5xl font-block leading-none">3</div>
+              <div className="text-white text-4xl lg:text-5xl font-body font-bold leading-none">3</div>
               <div className="text-white/60 text-xs lg:text-sm uppercase tracking-wider mt-2 font-bold">Days Pro Shows</div>
             </motion.div>
 
@@ -147,7 +149,7 @@ export default function WhyDhwani() {
               transition={{ delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <div className="text-white text-4xl lg:text-5xl font-block leading-none">100+</div>
+              <div className="text-white text-4xl lg:text-5xl font-body font-bold leading-none">100+</div>
               <div className="text-white/60 text-xs lg:text-sm uppercase tracking-wider mt-2 font-bold">Events & Comps</div>
             </motion.div>
 
@@ -159,7 +161,7 @@ export default function WhyDhwani() {
               transition={{ delay: 0.45 }}
               viewport={{ once: true }}
             >
-              <div className="text-white text-4xl lg:text-5xl font-block leading-none">35+</div>
+              <div className="text-white text-4xl lg:text-5xl font-body font-bold leading-none">35+</div>
               <div className="text-white/60 text-xs lg:text-sm uppercase tracking-wider mt-2 font-bold">Artists</div>
             </motion.div>
 
@@ -171,7 +173,7 @@ export default function WhyDhwani() {
               transition={{ delay: 0.5 }}
               viewport={{ once: true }}
             >
-              <div className="text-white text-4xl lg:text-5xl font-block leading-none">50+</div>
+              <div className="text-white text-4xl lg:text-5xl font-body font-bold leading-none">50+</div>
               <div className="text-white/60 text-xs lg:text-sm uppercase tracking-wider mt-2 font-bold">Food Stalls</div>
             </motion.div>
 

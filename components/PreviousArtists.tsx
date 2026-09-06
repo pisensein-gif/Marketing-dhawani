@@ -12,8 +12,23 @@ const sreenathImages = [
   "/sreenath-bhasi/6.jpg",
 ];
 
+const agamImages = [
+  "/agam/AGAM.jpg",
+  "/agam/AGAM3.jpg",
+  "/agam/Agam4.jpg",
+  "/agam/agam6.jpg",
+];
+
+const jonitaImages = [
+  "/jonitagandhi/jonita 2.jpg",
+  "/jonitagandhi/jonita 3.jpg",
+  "/jonitagandhi/jonita 4.jpg",
+];
+
 export default function PreviousArtists() {
   const [sreenathIndex, setSreenathIndex] = useState(0);
+  const [agamIndex, setAgamIndex] = useState(0);
+  const [jonitaIndex, setJonitaIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -22,10 +37,24 @@ export default function PreviousArtists() {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setAgamIndex((prevIndex) => (prevIndex + 1) % agamImages.length);
+    }, 3500);
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setJonitaIndex((prevIndex) => (prevIndex + 1) % jonitaImages.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   const pronites = [
-    { name: "Sreenath Bhasi", isSlideshow: true },
-    { name: "AGAM", image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?q=80&w=800" },
-    { name: "Jonita Gandhi", image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800" },
+    { name: "Sreenath Bhasi", isSlideshow: true, images: sreenathImages, index: sreenathIndex },
+    { name: "AGAM", isSlideshow: true, images: agamImages, index: agamIndex },
+    { name: "Jonita Gandhi", isSlideshow: true, images: jonitaImages, index: jonitaIndex },
   ];
 
   const gridTop = [
@@ -65,9 +94,9 @@ export default function PreviousArtists() {
                   <div className="relative w-full h-full">
                     <AnimatePresence mode="wait">
                       <motion.img 
-                        key={sreenathIndex}
-                        src={sreenathImages[sreenathIndex]} 
-                        alt="Sreenath Bhasi" 
+                        key={artist.index}
+                        src={artist.images[artist.index]} 
+                        alt={artist.name} 
                         initial={{ opacity: 0, scale: 1.05 }}
                         animate={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0 }}
@@ -78,11 +107,11 @@ export default function PreviousArtists() {
                     
                     {/* Slideshow Progress Dots */}
                     <div className="absolute top-4 right-4 z-20 flex gap-1.5">
-                      {sreenathImages.map((_, dotIdx) => (
+                      {artist.images.map((_: string, dotIdx: number) => (
                         <div 
                           key={dotIdx} 
                           className={`h-1.5 rounded-full transition-all duration-500 ${
-                            dotIdx === sreenathIndex ? "w-6 bg-dhwani-gold" : "w-1.5 bg-white/40"
+                            dotIdx === artist.index ? "w-6 bg-dhwani-gold" : "w-1.5 bg-white/40"
                           }`}
                         />
                       ))}
@@ -90,7 +119,7 @@ export default function PreviousArtists() {
                   </div>
                 ) : (
                   <img 
-                    src={artist.image} 
+                    src={(artist as any).image} 
                     alt={artist.name} 
                     className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 ease-out" 
                   />

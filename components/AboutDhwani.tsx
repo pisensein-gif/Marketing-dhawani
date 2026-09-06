@@ -126,7 +126,9 @@ export default function AboutDhwani() {
             <div className="flex flex-col justify-center gap-6 w-full relative z-10">
               {/* Instagram */}
               <motion.a
-                href="#"
+                href="https://www.instagram.com/dhwani_cet/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
                 variants={socialVariants}
                 whileHover={{ scale: 1.05, x: -10 }}
                 whileTap={{ scale: 0.95 }}
@@ -136,14 +138,16 @@ export default function AboutDhwani() {
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
                 </div>
                 <div className="flex flex-col">
-                  <div className="text-dhwani-white font-cursive italic text-4xl leading-none tracking-wider mb-1">16K+</div>
+                  <div className="text-dhwani-white font-body font-bold text-4xl leading-none tracking-wider mb-1">16K+</div>
                   <div className="text-dhwani-white/60 font-sans text-xs font-bold uppercase tracking-[0.3em]">Followers</div>
                 </div>
               </motion.a>
 
               {/* YouTube */}
               <motion.a
-                href="#"
+                href="https://www.youtube.com/c/dhwanicet"
+                target="_blank"
+                rel="noopener noreferrer"
                 variants={socialVariants}
                 whileHover={{ scale: 1.05, x: -10 }}
                 whileTap={{ scale: 0.95 }}
@@ -153,14 +157,16 @@ export default function AboutDhwani() {
                   <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l6.5 3.27-6.5 3.27z" /></svg>
                 </div>
                 <div className="flex flex-col">
-                  <div className="text-dhwani-white font-cursive italic text-4xl leading-none tracking-wider mb-1">1M+</div>
+                  <div className="text-dhwani-white font-body font-bold text-4xl leading-none tracking-wider mb-1">1M+</div>
                   <div className="text-dhwani-white/60 font-sans text-xs font-bold uppercase tracking-[0.3em]">Views</div>
                 </div>
               </motion.a>
 
               {/* Facebook */}
               <motion.a
-                href="#"
+                href="https://www.facebook.com/dhwanifest/"
+                target="_blank"
+                rel="noopener noreferrer"
                 variants={socialVariants}
                 whileHover={{ scale: 1.05, x: -10 }}
                 whileTap={{ scale: 0.95 }}
@@ -170,7 +176,7 @@ export default function AboutDhwani() {
                   <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
                 </div>
                 <div className="flex flex-col">
-                  <div className="text-dhwani-white font-cursive italic text-4xl leading-none tracking-wider mb-1">100K+</div>
+                  <div className="text-dhwani-white font-body font-bold text-4xl leading-none tracking-wider mb-1">100K+</div>
                   <div className="text-dhwani-white/60 font-sans text-xs font-bold uppercase tracking-[0.3em]">Likes</div>
                 </div>
               </motion.a>
@@ -212,7 +218,7 @@ export default function AboutDhwani() {
                   className="bg-[#020004]/70 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex flex-col items-center justify-center text-center shadow-xl hover:border-dhwani-accent/50 transition-colors"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="text-dhwani-white font-block text-3xl md:text-5xl leading-none mb-1 drop-shadow-md">100K+</div>
+                  <div className="text-dhwani-white font-body font-bold text-3xl md:text-5xl leading-none mb-1 drop-shadow-md">100K+</div>
                   <div className="text-dhwani-white/60 font-sans text-xs uppercase font-bold tracking-widest">Footfall</div>
                 </motion.div>
 
@@ -220,7 +226,7 @@ export default function AboutDhwani() {
                   className="bg-[#020004]/70 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex flex-col items-center justify-center text-center shadow-xl hover:border-dhwani-accent/50 transition-colors"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="text-dhwani-white font-block text-3xl md:text-5xl leading-none mb-1 drop-shadow-md">1000+</div>
+                  <div className="text-dhwani-white font-body font-bold text-3xl md:text-5xl leading-none mb-1 drop-shadow-md">1000+</div>
                   <div className="text-dhwani-white/60 font-sans text-xs uppercase font-bold tracking-widest">Campus</div>
                 </motion.div>
               </div>
@@ -255,7 +261,7 @@ export default function AboutDhwani() {
                   className="bg-[#020004]/70 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex flex-col items-center justify-center text-center shadow-xl hover:border-dhwani-accent/50 transition-colors"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="text-dhwani-white font-block text-3xl md:text-5xl leading-none mb-1 drop-shadow-md">100+</div>
+                  <div className="text-dhwani-white font-body font-bold text-3xl md:text-5xl leading-none mb-1 drop-shadow-md">100+</div>
                   <div className="text-dhwani-white/60 font-sans text-xs uppercase font-bold tracking-widest">Events</div>
                 </motion.div>
 
@@ -263,7 +269,7 @@ export default function AboutDhwani() {
                   className="bg-[#020004]/70 backdrop-blur-md border border-white/10 p-5 rounded-2xl flex flex-col items-center justify-center text-center shadow-xl hover:border-dhwani-accent/50 transition-colors"
                   whileHover={{ y: -5 }}
                 >
-                  <div className="text-dhwani-white font-block text-3xl md:text-5xl leading-none mb-1 drop-shadow-md">1M+</div>
+                  <div className="text-dhwani-white font-body font-bold text-3xl md:text-5xl leading-none mb-1 drop-shadow-md">1M+</div>
                   <div className="text-dhwani-white/60 font-sans text-xs uppercase font-bold tracking-widest">Cash Prizes</div>
                 </motion.div>
               </div>

@@ -178,15 +178,6 @@ export default function Hero() {
       {/* Gradient transition to next section */}
       <div className="absolute bottom-0 left-0 w-full h-24 md:h-40 bg-gradient-to-b from-transparent to-[#020004] pointer-events-none z-10"></div>
 
-      {/* Scroll for more indicator */}
-      <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/50 text-sm tracking-widest uppercase font-sans z-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-      >
-        Scroll for more
-      </motion.div>
     </section>
   );
 }

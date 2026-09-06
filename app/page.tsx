@@ -13,6 +13,7 @@ import CampaignStrategy from "@/components/CampaignStrategy";
 import SponsorsCarousel from "@/components/SponsorsCarousel";
 import MarketingProposal from "@/components/MarketingProposal";
 import ReturnOnInvestment from "@/components/ReturnOnInvestment";
+import CityMarketing from "@/components/CityMarketing";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -34,8 +35,10 @@ export default function Home() {
         <CampaignStrategy />
         <SponsorsCarousel />
         <MarketingProposal />
+        <CityMarketing />
         <ReturnOnInvestment />
         <ContactSection />
+        <Footer />
       </main>
     </div>
   );

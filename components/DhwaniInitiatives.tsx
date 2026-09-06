@@ -75,6 +75,13 @@ export default function DhwaniInitiatives() {
     "/df-juniors/6.jpeg",
   ];
 
+  const womenImages = [
+    "/df-juniors/1.jpeg",
+    "/df-society/1.jpeg",
+    "/df-juniors/3.jpeg",
+    "/df-society/3.jpeg",
+  ];
+
   return (
     <section className="bg-[#05020A] relative text-dhwani-white py-24 min-h-screen overflow-hidden font-sans border-t border-dhwani-highlight/20">
       
@@ -103,17 +110,13 @@ export default function DhwaniInitiatives() {
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-4 items-stretch justify-between w-full">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-2 items-stretch justify-between w-full">
           
-          {/* ================= LEFT COLUMN: DHWANI FOR SOCIETY ================= */}
-          <div className="lg:w-[45%] flex flex-col items-center justify-start">
-            
-            <div className="flex justify-between w-full items-start mb-6 pl-4">
-              <span className="text-white/50 text-xs font-bold tracking-widest uppercase">/Dhwani26</span>
-            </div>
+          {/* ================= COLUMN 1: DHWANI FOR SOCIETY ================= */}
+          <div className="lg:w-[30%] flex flex-col items-center justify-start">
 
             <motion.h2 
-              className="text-4xl sm:text-6xl md:text-[80px] lg:text-[90px] font-block leading-[0.85] text-center mb-16 drop-shadow-2xl"
+              className="text-4xl sm:text-6xl md:text-[80px] lg:text-[70px] font-block leading-[0.85] text-center mb-8 drop-shadow-2xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -128,13 +131,12 @@ export default function DhwaniInitiatives() {
           </div>
 
 
-          {/* ================= CENTER DIVIDER ================= */}
-          <div className="hidden lg:flex lg:w-[10%] flex-col items-center justify-center relative py-20 min-h-[600px]">
+          {/* ================= DIVIDER 1 ================= */}
+          <div className="hidden lg:flex lg:w-[5%] flex-col items-center justify-center relative py-20 min-h-[600px]">
             <div className="w-[1px] h-[35%] bg-gradient-to-b from-transparent via-dhwani-gold/50 to-dhwani-gold/50 absolute top-0"></div>
-            
             <div className="flex items-center justify-center h-full">
               <motion.div 
-                className="transform -rotate-90 whitespace-nowrap text-dhwani-gold text-2xl font-sans tracking-widest uppercase border-l-2 border-dhwani-gold pl-4 drop-shadow-[0_0_10px_rgba(255,215,0,0.3)]"
+                className="transform -rotate-90 whitespace-nowrap text-dhwani-gold text-xl font-sans tracking-widest uppercase border-l-2 border-dhwani-gold pl-4 drop-shadow-[0_0_10px_rgba(255,215,0,0.3)]"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -142,11 +144,10 @@ export default function DhwaniInitiatives() {
                 "Beyond celebrations, creating meaningful impact."
               </motion.div>
             </div>
-            
             <div className="w-[1px] h-[35%] bg-gradient-to-t from-transparent via-dhwani-gold/50 to-dhwani-gold/50 absolute bottom-0"></div>
           </div>
 
-          {/* Mobile Divider */}
+          {/* Mobile Divider 1 */}
           <div className="lg:hidden w-full flex justify-center items-center py-4 flex-col gap-4">
             <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-dhwani-gold/50 to-transparent"></div>
             <p className="text-dhwani-gold text-center text-sm font-sans tracking-widest uppercase px-4 drop-shadow-[0_0_10px_rgba(255,215,0,0.3)]">
@@ -156,15 +157,11 @@ export default function DhwaniInitiatives() {
           </div>
 
 
-          {/* ================= RIGHT COLUMN: DHWANI FOR JUNIORS ================= */}
-          <div className="lg:w-[45%] flex flex-col items-center justify-start">
-            
-            <div className="flex justify-end w-full items-start mb-6 pr-4">
-              <span className="text-white/50 text-xs font-bold tracking-widest uppercase">/Brochure</span>
-            </div>
+          {/* ================= COLUMN 2: DHWANI FOR JUNIORS ================= */}
+          <div className="lg:w-[30%] flex flex-col items-center justify-start">
 
             <motion.h2 
-              className="text-5xl md:text-[70px] lg:text-[80px] font-block leading-[0.85] text-center mb-6 drop-shadow-2xl flex flex-col justify-center"
+              className="text-5xl md:text-[70px] lg:text-[70px] font-block leading-[0.85] text-center mb-8 drop-shadow-2xl flex flex-col justify-center"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -173,18 +170,55 @@ export default function DhwaniInitiatives() {
               <span className="text-white">FOR JUNIORS</span>
             </motion.h2>
 
-            <motion.p 
-              className="text-white/80 font-sans text-sm md:text-base leading-relaxed text-center px-4 max-w-md mx-auto mb-16 shadow-black/50"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              Dhwani champions educational growth by actively mentoring local students while extending its commitment to inclusivity through dedicated programs for differently abled youth, ensuring that the spark of curiosity reaches everyone.
-            </motion.p>
 
             {/* Stacked Carousel */}
             <StackedCarousel images={juniorImages} />
+            
+          </div>
+
+
+          {/* ================= DIVIDER 2 ================= */}
+          <div className="hidden lg:flex lg:w-[5%] flex-col items-center justify-center relative py-20 min-h-[600px]">
+            <div className="w-[1px] h-[35%] bg-gradient-to-b from-transparent via-dhwani-gold/50 to-dhwani-gold/50 absolute top-0"></div>
+            <div className="flex items-center justify-center h-full">
+              <motion.div 
+                className="transform -rotate-90 whitespace-nowrap text-dhwani-gold text-xl font-sans tracking-widest uppercase border-l-2 border-dhwani-gold pl-4 drop-shadow-[0_0_10px_rgba(255,215,0,0.3)]"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+              >
+                "Empowering every voice, celebrating every story."
+              </motion.div>
+            </div>
+            <div className="w-[1px] h-[35%] bg-gradient-to-t from-transparent via-dhwani-gold/50 to-dhwani-gold/50 absolute bottom-0"></div>
+          </div>
+
+          {/* Mobile Divider 2 */}
+          <div className="lg:hidden w-full flex justify-center items-center py-4 flex-col gap-4">
+            <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-dhwani-gold/50 to-transparent"></div>
+            <p className="text-dhwani-gold text-center text-sm font-sans tracking-widest uppercase px-4 drop-shadow-[0_0_10px_rgba(255,215,0,0.3)]">
+              "Empowering every voice, celebrating every story."
+            </p>
+            <div className="w-1/2 h-[1px] bg-gradient-to-r from-transparent via-dhwani-gold/50 to-transparent"></div>
+          </div>
+
+
+          {/* ================= COLUMN 3: DHWANI FOR WOMEN ================= */}
+          <div className="lg:w-[30%] flex flex-col items-center justify-start">
+
+            <motion.h2 
+              className="text-5xl md:text-[70px] lg:text-[70px] font-block leading-[0.85] text-center mb-8 drop-shadow-2xl flex flex-col justify-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <span className="text-dhwani-gold tracking-tighter">DHWANI</span>
+              <span className="text-white">FOR WOMEN</span>
+            </motion.h2>
+
+
+            {/* Stacked Carousel */}
+            <StackedCarousel images={womenImages} />
             
           </div>
 

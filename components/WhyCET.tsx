@@ -29,10 +29,9 @@ export default function WhyCET() {
               <img src="/kerala-map.png" className="w-full h-full object-contain" alt="Kerala Map" />
             </div>
             
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[100px] font-block tracking-tighter leading-[0.8] mb-6 relative z-10">
-              <span className="text-white italic pr-4">WHY</span><br/>
-              <span className="text-[#E5162E] drop-shadow-[0_0_20px_rgba(229,22,46,0.5)]">CET</span>
-              <span className="text-white/50 text-3xl sm:text-4xl md:text-5xl absolute mt-[-10px] ml-2">?</span>
+            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[100px] font-body font-bold tracking-tighter leading-[0.8] mb-6 relative z-10">
+              <span className="text-white pr-4">WHY</span><br/>
+              <span className="text-[#E5162E] drop-shadow-[0_0_20px_rgba(229,22,46,0.5)]">CET<span className="text-white/50">?</span></span>
             </h2>
             <div className="text-dhwani-gold font-sans font-bold uppercase tracking-widest text-sm max-w-[250px] relative z-10">
               Strategic Location Analysis & Demographic Advantage
@@ -51,15 +50,25 @@ export default function WhyCET() {
                <h3 className="font-block text-2xl text-dhwani-gold tracking-wide">MASSIVE STUDENT REACH</h3>
                <span className="bg-white/10 text-white/50 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full">Within 20km</span>
              </div>
-             <div className="grid grid-cols-2 gap-6">
+             <div className="grid grid-cols-2 gap-6 mb-6">
                <div>
-                 <div className="text-4xl lg:text-5xl font-block text-white mb-2">70,000+</div>
+                 <div className="text-4xl lg:text-5xl font-body font-bold text-white mb-2">70,000+</div>
                  <div className="text-xs font-sans text-white/70 leading-relaxed">Students across 80<br/>Colleges & Universities</div>
                </div>
                <div>
-                 <div className="text-4xl lg:text-5xl font-block text-white mb-2">50,000+</div>
+                 <div className="text-4xl lg:text-5xl font-body font-bold text-white mb-2">50,000+</div>
                  <div className="text-xs font-sans text-white/70 leading-relaxed">High-school Seniors<br/>across 225 Regional Schools</div>
                </div>
+             </div>
+             <div className="mt-auto pt-2">
+               <a 
+                 href="https://drive.google.com/file/d/1WOh5xytKPSN2tzV8_fWmiki06HSn3_-k/view?usp=drive_link" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="inline-block px-6 py-2 bg-dhwani-gold text-black font-body font-bold text-sm uppercase tracking-widest rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_15px_rgba(255,215,0,0.4)]"
+               >
+                 View More
+               </a>
              </div>
           </motion.div>
 
