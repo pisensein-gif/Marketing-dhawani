@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Montserrat } from "next/font/google";
+import { DM_Sans, Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
 
 const sansFont = DM_Sans({
@@ -11,6 +11,12 @@ const blockFont = Montserrat({
   variable: "--font-custom-block",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
+});
+
+const poppinsFont = Poppins({
+  variable: "--font-custom-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sansFont.variable} ${blockFont.variable} h-full antialiased scroll-smooth`}
+      className={`${sansFont.variable} ${blockFont.variable} ${poppinsFont.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

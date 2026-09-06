@@ -78,12 +78,24 @@ export default function FlagshipEvents() {
             setIsInteracting(true);
             if (interactionTimeoutRef.current) clearTimeout(interactionTimeoutRef.current);
           }}
-          onPanEnd={(e, info) => {
-            if (info.offset.x < -50) {
-              nextSlide();
-            } else if (info.offset.x > 50) {
-              prevSlide();
-            }
+          onPan={(e, info) => {
+            setRotation((prev) => {
+              const newRot = prev + info.delta.x * 0.4; // 0.4 is sensitivity
+              let newIndex = Math.round(-newRot / angle) % numCards;
+              if (newIndex < 0) newIndex += numCards;
+              setActiveIndex(newIndex);
+              return newRot;
+            });
+          }}
+          onPanEnd={() => {
+            // Snap to the nearest card precisely
+            setRotation((prev) => {
+              const snapRot = Math.round(prev / angle) * angle;
+              let newIndex = Math.round(-snapRot / angle) % numCards;
+              if (newIndex < 0) newIndex += numCards;
+              setActiveIndex(newIndex);
+              return snapRot;
+            });
             startInteractionTimeout();
           }}
         >
@@ -93,7 +105,7 @@ export default function FlagshipEvents() {
             style={{ transformStyle: "preserve-3d", transform: "rotateX(-12deg) translateY(-20px)" }}
           >
             <motion.div
-              className="relative w-28 sm:w-40 md:w-60 lg:w-72 aspect-[3/4] flex justify-center items-center"
+              className="relative w-20 sm:w-32 md:w-48 lg:w-56 aspect-[3/4] flex justify-center items-center"
               style={{ transformStyle: "preserve-3d" }}
               animate={{ rotateY: rotation }}
               transition={{ type: "spring", stiffness: 80, damping: 20 }}
@@ -109,7 +121,7 @@ export default function FlagshipEvents() {
                         : 'border-white/10 opacity-30 blur-[3px] z-10'
                       }`}
                     style={{
-                      transform: `rotateY(${i * angle}deg) translateZ(clamp(130px, 25vw, 380px)) ${isActive ? 'scale(1.4)' : 'scale(1)'}`,
+                      transform: `rotateY(${i * angle}deg) translateZ(clamp(100px, 20vw, 300px)) ${isActive ? 'scale(1.4)' : 'scale(1)'}`,
                     }}
                   >
                     <div className="w-full h-full relative group">

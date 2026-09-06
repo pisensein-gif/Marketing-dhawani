@@ -93,7 +93,7 @@ export default function ContactSection() {
                 HEAD OF MARKETING
               </span>
               <p className="font-bold text-white text-sm md:text-base tracking-wide flex items-center gap-2 mb-1">
-                NANDAKISHOR K <span className="text-white/50">📞</span> 7902791880
+                NANDAKISHOR <span className="text-white/50">📞</span> 7902791880
               </p>
               <a href="mailto:knandhkishor@gmail.com" className="font-sans text-white/60 text-xs md:text-sm underline hover:text-dhwani-gold transition-colors">
                 knandhkishor@gmail.com

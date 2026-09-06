@@ -81,7 +81,7 @@ export default function Navbar() {
               </button>
             ))}
             <button
-              onClick={() => handleNavClick("#contact")}
+              onClick={() => handleNavClick("#proposal")}
               className="px-5 py-2 lg:px-6 bg-dhwani-accent text-white font-semibold rounded-full text-xs lg:text-sm hover:brightness-125 hover:shadow-[0_0_20px_rgba(139,92,246,0.5)] transition-all duration-300"
             >
               Sponsor Us
@@ -154,7 +154,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  onClick={() => handleNavClick("#contact")}
+                  onClick={() => handleNavClick("#proposal")}
                   className="w-full py-4 bg-dhwani-accent text-white font-bold text-base rounded-2xl hover:brightness-125 hover:shadow-[0_0_25px_rgba(139,92,246,0.5)] transition-all duration-300"
                 >
                   🎵 Sponsor Dhwani '26

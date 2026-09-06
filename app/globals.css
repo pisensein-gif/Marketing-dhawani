@@ -28,7 +28,7 @@
   --font-block: var(--font-custom-block, "ui-sans-serif", "system-ui");
   --font-cursive: var(--font-custom-block, "ui-sans-serif", "system-ui");
   --font-comic: var(--font-custom-block, "ui-sans-serif", "system-ui");
-  --font-body: var(--font-custom-sans, "ui-sans-serif", "system-ui");
+  --font-body: var(--font-custom-poppins, "ui-sans-serif", "system-ui");
 }
 
 html {
@@ -44,14 +44,26 @@ body {
   max-width: 100vw;
 }
 
-/* Paragraphs and body copy strictly use DM Sans (Google Sans) */
+/* Paragraphs and body copy strictly use Poppins */
 p, .font-body {
-  font-family: var(--font-custom-sans, sans-serif);
+  font-family: var(--font-custom-poppins, sans-serif);
 }
 
-/* Headings, buttons, labels, and block elements strictly use Montserrat */
-h1, h2, h3, h4, h5, h6, button, a, .font-block {
+/* Headings (except H1/H2/H3), buttons, labels, and block elements use Montserrat */
+h4, h5, h6, button, a, .font-block {
   font-family: var(--font-custom-block, sans-serif);
+}
+
+/* H1 specifically uses Poppins Bold */
+h1 {
+  font-family: var(--font-custom-poppins, sans-serif) !important;
+  font-weight: 700 !important;
+}
+
+/* H2 and H3 specifically use Poppins SemiBold */
+h2, h3 {
+  font-family: var(--font-custom-poppins, sans-serif) !important;
+  font-weight: 600 !important;
 }
 
 @layer utilities {

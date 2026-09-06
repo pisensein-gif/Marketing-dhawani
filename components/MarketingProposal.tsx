@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function MarketingProposal() {
   return (
-    <section className="bg-[#05020A] relative overflow-hidden text-dhwani-white py-24 border-t border-dhwani-highlight/20 font-sans">
+    <section id="proposal" className="bg-[#05020A] relative overflow-hidden text-dhwani-white py-24 border-t border-dhwani-highlight/20 font-sans">
       
       {/* Background Effect */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
