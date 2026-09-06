@@ -47,7 +47,7 @@ export default function FlagshipEvents() {
   }, [isInteracting]);
 
   return (
-    <section className="py-24 bg-[#05020A] relative overflow-hidden text-dhwani-white border-t border-dhwani-highlight/20 min-h-[90vh] flex flex-col items-center justify-center">
+    <section className="py-12 md:py-24 bg-[#05020A] relative overflow-hidden text-dhwani-white border-t border-dhwani-highlight/20 min-h-[60vh] md:min-h-[90vh] flex flex-col items-center justify-center">
       
       {/* Background glow */}
       <div className="absolute inset-0 opacity-30 pointer-events-none overflow-hidden">
@@ -105,7 +105,7 @@ export default function FlagshipEvents() {
             style={{ transformStyle: "preserve-3d", transform: "rotateX(-12deg) translateY(-20px)" }}
           >
             <motion.div
-              className="relative w-20 sm:w-32 md:w-48 lg:w-56 aspect-[3/4] flex justify-center items-center"
+              className="relative w-32 sm:w-40 md:w-56 lg:w-64 aspect-[3/4] flex justify-center items-center"
               style={{ transformStyle: "preserve-3d" }}
               animate={{ rotateY: rotation }}
               transition={{ type: "spring", stiffness: 80, damping: 20 }}
@@ -121,7 +121,7 @@ export default function FlagshipEvents() {
                         : 'border-white/10 opacity-30 blur-[3px] z-10'
                       }`}
                     style={{
-                      transform: `rotateY(${i * angle}deg) translateZ(clamp(100px, 20vw, 300px)) ${isActive ? 'scale(1.4)' : 'scale(1)'}`,
+                      transform: `rotateY(${i * angle}deg) translateZ(clamp(140px, 25vw, 350px)) ${isActive ? 'scale(1.4)' : 'scale(1)'}`,
                     }}
                   >
                     <div className="w-full h-full relative group">

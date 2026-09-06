@@ -12,8 +12,7 @@ export default function LegacySection() {
         <img 
           src="/athiradi-text.png"
           alt="Athiradi Text Background"
-          className="w-auto h-[120%] max-w-none object-contain opacity-80 drop-shadow-2xl md:w-auto"
-          style={{ transform: 'translateX(-20vw) rotate(90deg) scale(1.5)' }}
+          className="w-auto h-[100%] md:h-[120%] max-w-none object-contain opacity-80 drop-shadow-2xl transform rotate-90 scale-[0.4] md:scale-150 -translate-x-[15vw] -translate-y-[35vh] md:-translate-x-[20vw] md:translate-y-0"
         />
       </div>
 

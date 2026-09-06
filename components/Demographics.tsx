@@ -250,7 +250,7 @@ export default function Demographics() {
               />
               
               {/* Map Pin */}
-              <div className="absolute bottom-[15%] right-[35%] md:bottom-[18%] md:right-[38%] flex flex-col items-center z-30 transform scale-100 md:scale-125">
+              <div className="absolute bottom-[12%] right-[18%] md:bottom-[18%] md:right-[38%] flex flex-col items-center z-30 transform scale-100 md:scale-125">
                 <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-red-600 border-2 md:border-4 border-white shadow-[0_0_20px_rgba(220,38,38,0.8)] relative flex justify-center items-center mb-1 animate-bounce">
                   <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-white rounded-full"></div>
                   {/* Pin tail */}

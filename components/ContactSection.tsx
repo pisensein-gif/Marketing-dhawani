@@ -103,13 +103,13 @@ export default function ContactSection() {
           </div>
 
           {/* Main Email Pill */}
-          <a href="mailto:marketing.dhwani.cet@gmail.com" className="bg-[#1A0A24] border border-[#2A1045] rounded-full px-8 md:px-12 py-4 flex items-center gap-3 hover:bg-[#250F33] transition-colors shadow-lg group">
+          <a href="mailto:marketing@dhwanicet.com" className="bg-[#1A0A24] border border-[#2A1045] rounded-full px-8 md:px-12 py-4 flex items-center gap-3 hover:bg-[#250F33] transition-colors shadow-lg group">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-white/80 group-hover:text-white">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
               <polyline points="22,6 12,13 2,6" />
             </svg>
             <span className="font-sans text-white text-sm md:text-base font-bold underline tracking-wide">
-              marketing.dhwani.cet@gmail.com
+              marketing@dhwanicet.com
             </span>
           </a>
 
