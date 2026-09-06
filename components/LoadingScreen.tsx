@@ -3,25 +3,78 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+// Critical assets required for Hero page and key sections to render instantly
+const CRITICAL_ASSETS = [
+  "/dhwani_logo.png",
+  "/dhwani_title.svg",
+  "/dhwani_og_26.png",
+  "/MASCOT front transp.png",
+  "/elements/CLOUDS.svg",
+  "/elements/new%20ferris.svg",
+  "/elements/torii%20new.svg",
+  "/elements/note.svg",
+  "/elements/blue%20note.svg",
+  "/100K+.png",
+  "/1M+.png",
+  "/10m.png",
+  "/kerala-map.png",
+  "/sreenath-bhasi/1.jpg",
+  "/sreenath-bhasi/2.jpg",
+  "/agam/AGAM.jpg",
+  "/jonitagandhi/jonita 2.jpg",
+];
+
 export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Progress counter animation
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setTimeout(() => setIsLoading(false), 400);
-          return 100;
-        }
-        const diff = Math.floor(Math.random() * 15) + 5;
-        return Math.min(prev + diff, 100);
-      });
-    }, 120);
+    let isMounted = true;
+    const totalAssets = CRITICAL_ASSETS.length;
+    let loadedCount = 0;
 
-    return () => clearInterval(interval);
+    const handleAssetLoad = () => {
+      loadedCount++;
+      if (isMounted) {
+        const calculatedProgress = Math.min(100, Math.floor((loadedCount / totalAssets) * 100));
+        setProgress(calculatedProgress);
+
+        if (loadedCount >= totalAssets) {
+          // All assets preloaded into browser memory!
+          setTimeout(() => {
+            if (isMounted) {
+              setProgress(100);
+              setTimeout(() => {
+                if (isMounted) setIsLoading(false);
+              }, 400);
+            }
+          }, 300);
+        }
+      }
+    };
+
+    // Preload each critical asset into memory
+    CRITICAL_ASSETS.forEach((src) => {
+      const img = new Image();
+      img.onload = handleAssetLoad;
+      img.onerror = handleAssetLoad; // Continue progress even if a fallback fails
+      img.src = src;
+    });
+
+    // Fallback timer in case network is slow or cached instantly
+    const fallbackTimer = setTimeout(() => {
+      if (isMounted && isLoading) {
+        setProgress(100);
+        setTimeout(() => {
+          if (isMounted) setIsLoading(false);
+        }, 300);
+      }
+    }, 4500);
+
+    return () => {
+      isMounted = false;
+      clearTimeout(fallbackTimer);
+    };
   }, []);
 
   return (
@@ -38,10 +91,10 @@ export default function LoadingScreen() {
           }}
           className="fixed inset-0 z-[99999] bg-[#05020A] flex flex-col items-center justify-center px-6 overflow-hidden select-none font-sans"
         >
-          {/* Ambient Lighting */}
+          {/* Ambient Background Lighting */}
           <div className="absolute inset-0 pointer-events-none opacity-40">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-[#8B12FF]/25 to-[#FFD700]/15 rounded-full blur-[140px] animate-pulse" />
-            <div className="absolute top-1/4 left-1/3 w-[350px] h-[350px] bg-[#E5162E]/15 rounded-full blur-[100px]" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-gradient-to-r from-[#8B12FF]/30 to-[#FFD700]/20 rounded-full blur-[140px] animate-pulse" />
+            <div className="absolute top-1/4 left-1/3 w-[350px] h-[350px] bg-[#E5162E]/20 rounded-full blur-[110px]" />
           </div>
 
           <div className="relative z-10 flex flex-col items-center max-w-md w-full text-center">
@@ -50,7 +103,7 @@ export default function LoadingScreen() {
             <motion.div
               initial={{ scale: 0.7, opacity: 0, y: 20 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="relative mb-6"
             >
               <div className="absolute -inset-4 bg-gradient-to-r from-[#8B12FF]/30 to-[#FFD700]/30 rounded-full blur-2xl opacity-60 animate-pulse" />
@@ -65,7 +118,7 @@ export default function LoadingScreen() {
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="mb-10 w-full max-w-[280px] md:max-w-[340px] flex justify-center"
             >
               <img
@@ -75,24 +128,26 @@ export default function LoadingScreen() {
               />
             </motion.div>
 
-            {/* Progress Bar & Status */}
+            {/* Progress Bar & Realtime Preloading Status */}
             <motion.div 
               className="w-full max-w-xs flex flex-col items-center gap-3"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.4 }}
             >
               {/* Progress Track */}
               <div className="w-full h-1.5 bg-white/10 rounded-full overflow-hidden p-0.5 border border-white/10 shadow-inner">
                 <motion.div
-                  className="h-full bg-gradient-to-r from-[#8B12FF] via-[#B829FF] to-[#FFD700] rounded-full shadow-[0_0_15px_rgba(255,215,0,0.8)] transition-all duration-200 ease-out"
+                  className="h-full bg-gradient-to-r from-[#8B12FF] via-[#B829FF] to-[#FFD700] rounded-full shadow-[0_0_15px_rgba(255,215,0,0.8)] transition-all duration-300 ease-out"
                   style={{ width: `${progress}%` }}
                 />
               </div>
 
               {/* Counter & Subtext */}
               <div className="flex justify-between w-full text-[11px] font-mono text-white/60 tracking-widest uppercase mt-1 px-1">
-                <span className="text-white/40">Cultural Fest &apos;26</span>
+                <span className="text-white/40">
+                  {progress < 100 ? "Preloading Assets..." : "Ready to Experience"}
+                </span>
                 <span className="text-dhwani-gold font-bold font-mono">{progress}%</span>
               </div>
             </motion.div>
@@ -108,4 +163,3 @@ export default function LoadingScreen() {
     </AnimatePresence>
   );
 }
-
