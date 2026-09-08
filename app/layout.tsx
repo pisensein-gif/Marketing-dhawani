@@ -20,8 +20,49 @@ const poppinsFont = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Dhwani '26 | College of Engineering Trivandrum",
-  description: "Sponsorship Prospectus for Dhwani '26",
+  metadataBase: new URL("https://marketing.dhwanicet.com"),
+  title: {
+    default: "Dhwani '26 | Marketing & Sponsorship Prospectus",
+    template: "%s | Dhwani '26 CET",
+  },
+  description: "Official Marketing & Sponsorship Prospectus for Dhwani '26, College of Engineering Trivandrum. Discover brand partnership opportunities, demographics, and citywide activations.",
+  keywords: [
+    "Dhwani 2026",
+    "Dhwani CET",
+    "College of Engineering Trivandrum",
+    "Cultural Fest Sponsorship",
+    "Campus Marketing",
+    "Brand Partnerships",
+    "Trivandrum City Marketing"
+  ],
+  authors: [{ name: "Dhwani CET Marketing Team" }],
+  creator: "Dhwani CET",
+  publisher: "College of Engineering Trivandrum",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Dhwani '26 | Marketing & Sponsorship Prospectus",
+    description: "Official Marketing & Sponsorship Prospectus for Dhwani '26, College of Engineering Trivandrum. Kerala's largest cultural fest.",
+    url: "https://marketing.dhwanicet.com",
+    siteName: "Dhwani '26 Marketing",
+    images: [
+      {
+        url: "/dhwani_logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Dhwani '26 Logo",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dhwani '26 | Marketing & Sponsorship Prospectus",
+    description: "Partner with Dhwani '26 - Kerala's largest campus cultural extravaganza at CET Trivandrum.",
+    images: ["/dhwani_logo.png"],
+  },
 };
 
 export default function RootLayout({
