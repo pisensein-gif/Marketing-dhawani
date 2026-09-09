@@ -42,10 +42,10 @@ export const metadata: Metadata = {
   publisher: "College of Engineering Trivandrum",
   icons: {
     icon: [
-      { url: "/dhwani_logo.png", type: "image/png" },
+      { url: "/dhwani_favicon_black.png", type: "image/png" },
     ],
-    shortcut: "/dhwani_logo.png",
-    apple: "/dhwani_logo.png",
+    shortcut: "/dhwani_favicon_black.png",
+    apple: "/dhwani_favicon_black.png",
   },
   alternates: {
     canonical: "/",
@@ -70,13 +70,13 @@ export const metadata: Metadata = {
     siteName: "Dhwani '26 CET",
     images: [
       {
-        url: "/dhwani_og_26.png",
+        url: "/dhwani_og_black.png",
         width: 1200,
         height: 630,
         alt: "Dhwani '26 CET - Kerala's Largest Cultural Fest",
       },
       {
-        url: "/dhwani_logo.png",
+        url: "/dhwani_favicon_black.png",
         width: 512,
         height: 512,
         alt: "Dhwani Logo",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dhwani '26 | Marketing & Sponsorship Prospectus",
     description: "Partner with Dhwani '26 - Kerala's largest campus cultural extravaganza at CET Trivandrum.",
-    images: ["/dhwani_og_26.png"],
+    images: ["/dhwani_og_black.png"],
   },
 };
 
@@ -111,8 +111,8 @@ const jsonLd = {
       "@id": "https://marketing.dhwanicet.com/#organization",
       "name": "Dhwani CET",
       "url": "https://marketing.dhwanicet.com",
-      "logo": "https://marketing.dhwanicet.com/dhwani_logo.png",
-      "image": "https://marketing.dhwanicet.com/dhwani_og_26.png",
+      "logo": "https://marketing.dhwanicet.com/dhwani_favicon_black.png",
+      "image": "https://marketing.dhwanicet.com/dhwani_og_black.png",
       "sameAs": [
         "https://instagram.com/dhwanilive",
         "https://instagram.com/dhwaniflea"
@@ -137,8 +137,8 @@ const jsonLd = {
         }
       },
       "image": [
-        "https://marketing.dhwanicet.com/dhwani_og_26.png",
-        "https://marketing.dhwanicet.com/dhwani_logo.png"
+        "https://marketing.dhwanicet.com/dhwani_og_black.png",
+        "https://marketing.dhwanicet.com/dhwani_favicon_black.png"
       ],
       "description": "Kerala's largest campus cultural fest attracting over 100,000+ footfall at CET Trivandrum.",
       "organizer": {
