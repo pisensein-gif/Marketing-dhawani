@@ -42,10 +42,12 @@ export const metadata: Metadata = {
   publisher: "College of Engineering Trivandrum",
   icons: {
     icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico" },
       { url: "/dhwani_favicon_black.png", type: "image/png" },
     ],
-    shortcut: "/dhwani_favicon_black.png",
-    apple: "/dhwani_favicon_black.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
   },
   alternates: {
     canonical: "/",
