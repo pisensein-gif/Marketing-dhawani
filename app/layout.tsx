@@ -5,18 +5,24 @@ import "./globals.css";
 const sansFont = DM_Sans({
   variable: "--font-custom-sans",
   subsets: ["latin"],
+  display: "swap",
+  fallback: ["system-ui", "sans-serif"],
 });
 
 const blockFont = Montserrat({
   variable: "--font-custom-block",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  fallback: ["sans-serif"],
 });
 
 const poppinsFont = Poppins({
   variable: "--font-custom-poppins",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+  fallback: ["sans-serif"],
 });
 
 export const metadata: Metadata = {
