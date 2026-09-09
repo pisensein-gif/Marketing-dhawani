@@ -28,30 +28,58 @@ export const metadata: Metadata = {
   description: "Official Marketing & Sponsorship Prospectus for Dhwani '26, College of Engineering Trivandrum. Discover brand partnership opportunities, demographics, and citywide activations.",
   keywords: [
     "Dhwani 2026",
+    "Dhwani '26",
     "Dhwani CET",
     "College of Engineering Trivandrum",
     "Cultural Fest Sponsorship",
-    "Campus Marketing",
+    "Campus Marketing Kerala",
     "Brand Partnerships",
-    "Trivandrum City Marketing"
+    "Trivandrum City Marketing",
+    "Kerala College Fest"
   ],
   authors: [{ name: "Dhwani CET Marketing Team" }],
   creator: "Dhwani CET",
   publisher: "College of Engineering Trivandrum",
+  icons: {
+    icon: [
+      { url: "/dhwani_logo.png", type: "image/png" },
+    ],
+    shortcut: "/dhwani_logo.png",
+    apple: "/dhwani_logo.png",
+  },
   alternates: {
     canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
     title: "Dhwani '26 | Marketing & Sponsorship Prospectus",
     description: "Official Marketing & Sponsorship Prospectus for Dhwani '26, College of Engineering Trivandrum. Kerala's largest cultural fest.",
     url: "https://marketing.dhwanicet.com",
-    siteName: "Dhwani '26 Marketing",
+    siteName: "Dhwani '26 CET",
     images: [
       {
-        url: "/dhwani_logo.png",
+        url: "/dhwani_og_26.png",
         width: 1200,
         height: 630,
-        alt: "Dhwani '26 Logo",
+        alt: "Dhwani '26 CET - Kerala's Largest Cultural Fest",
+      },
+      {
+        url: "/dhwani_logo.png",
+        width: 512,
+        height: 512,
+        alt: "Dhwani Logo",
       },
     ],
     locale: "en_US",
@@ -61,8 +89,65 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dhwani '26 | Marketing & Sponsorship Prospectus",
     description: "Partner with Dhwani '26 - Kerala's largest campus cultural extravaganza at CET Trivandrum.",
-    images: ["/dhwani_logo.png"],
+    images: ["/dhwani_og_26.png"],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://marketing.dhwanicet.com/#website",
+      "url": "https://marketing.dhwanicet.com",
+      "name": "Dhwani '26 Marketing",
+      "description": "Official Sponsorship & Marketing Portal for Dhwani '26 CET",
+      "publisher": {
+        "@id": "https://marketing.dhwanicet.com/#organization"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://marketing.dhwanicet.com/#organization",
+      "name": "Dhwani CET",
+      "url": "https://marketing.dhwanicet.com",
+      "logo": "https://marketing.dhwanicet.com/dhwani_logo.png",
+      "image": "https://marketing.dhwanicet.com/dhwani_og_26.png",
+      "sameAs": [
+        "https://instagram.com/dhwanilive",
+        "https://instagram.com/dhwaniflea"
+      ]
+    },
+    {
+      "@type": "Event",
+      "name": "Dhwani '26 - Cultural Festival",
+      "startDate": "2026-10-01",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "College of Engineering Trivandrum",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Engineering College P.O.",
+          "addressLocality": "Trivandrum",
+          "addressRegion": "Kerala",
+          "postalCode": "695016",
+          "addressCountry": "IN"
+        }
+      },
+      "image": [
+        "https://marketing.dhwanicet.com/dhwani_og_26.png",
+        "https://marketing.dhwanicet.com/dhwani_logo.png"
+      ],
+      "description": "Kerala's largest campus cultural fest attracting over 100,000+ footfall at CET Trivandrum.",
+      "organizer": {
+        "@type": "Organization",
+        "name": "College of Engineering Trivandrum",
+        "url": "https://marketing.dhwanicet.com"
+      }
+    }
+  ]
 };
 
 export default function RootLayout({
@@ -75,6 +160,12 @@ export default function RootLayout({
       lang="en"
       className={`${sansFont.variable} ${blockFont.variable} ${poppinsFont.variable} h-full antialiased scroll-smooth`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
