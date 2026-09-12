@@ -22,6 +22,8 @@ const CRITICAL_ASSETS = [
   "/sreenath-bhasi/2.jpg",
   "/agam/AGAM.jpg",
   "/jonitagandhi/jonita 2.jpg",
+  "/Flagship/spotlight.jpeg",
+  "/Flagship/rangam.jpg",
 ];
 
 export default function LoadingScreen() {

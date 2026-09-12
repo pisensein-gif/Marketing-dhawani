@@ -4,12 +4,13 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 const events = [
-  { id: 1, title: "Anthara", img: "/Flagship/Anthara.jpg" },
-  { id: 2, title: "Fashion Show", img: "/Flagship/fs.jpg" },
-  { id: 3, title: "Informals", img: "/Flagship/INFORMALS.png" },
-  { id: 4, title: "Khelolsav", img: "/Flagship/khelolsav.jpg" },
-  { id: 5, title: "Nadandha", img: "/Flagship/nadandha.jpg" },
-  { id: 6, title: "Rangam", img: "/Flagship/rangam.jpg" },
+  { id: 1, title: "SpotLight", img: "/Flagship/spotlight.jpeg" },
+  { id: 2, title: "Rangam Film Festival", img: "/Flagship/rangam.jpg" },
+  { id: 3, title: "Anthara", img: "/Flagship/Anthara.jpg" },
+  { id: 4, title: "Fashion Show", img: "/Flagship/fs.jpg" },
+  { id: 5, title: "Informals", img: "/Flagship/INFORMALS.png" },
+  { id: 6, title: "Khelolsav", img: "/Flagship/khelolsav.jpg" },
+  { id: 7, title: "Nadandha", img: "/Flagship/nadandha.jpg" },
 ];
 
 export default function FlagshipEvents() {
